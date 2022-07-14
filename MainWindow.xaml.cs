@@ -13,14 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace sql_contactslist
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    static private string sqlConnectionString = "Data Source=localhost;Integrated Security = True";
+    
     public partial class MainWindow : Window
     {
+
+        static private string sqlConnectionString = "Data Source=localhost;Integrated Security = True";
+
         public MainWindow()
         {
             DatabaseHelper dbUsers = new DatabaseHelper(sqlConnectionString);
