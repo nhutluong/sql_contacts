@@ -18,11 +18,14 @@ namespace sql_contactslist
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    static private string sqlConnectionString = "Data Source=localhost;Integrated Security = True";
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
-            InitializeComponent();
+            DatabaseHelper dbUsers = new DatabaseHelper(sqlConnectionString);
+
+
         }//end main
     }//end class
 }//end namespace
