@@ -19,3 +19,10 @@ C:\Users\nhatl\source\repos\sql_contactslist\obj\Debug\net6.0-windows\refint\sql
 C:\Users\nhatl\source\repos\sql_contactslist\obj\Debug\net6.0-windows\sql_contactslist.pdb
 C:\Users\nhatl\source\repos\sql_contactslist\obj\Debug\net6.0-windows\sql_contactslist.genruntimeconfig.cache
 C:\Users\nhatl\source\repos\sql_contactslist\obj\Debug\net6.0-windows\ref\sql_contactslist.dll
+C:\Users\nhatl\source\repos\sql_contactslist\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\nhatl\source\repos\sql_contactslist\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\nhatl\source\repos\sql_contactslist\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\nhatl\source\repos\sql_contactslist\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\nhatl\source\repos\sql_contactslist\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\nhatl\source\repos\sql_contactslist\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\nhatl\source\repos\sql_contactslist\obj\Debug\net6.0-windows\sql_contactslist.csproj.CopyComplete
