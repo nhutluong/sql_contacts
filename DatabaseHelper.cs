@@ -271,5 +271,65 @@ namespace sql_contactslist
             return currentlyConnected;
         }//end method
 
+        //end andrew's methods
+
+
+        //my methods
+        public List<SQLDatabaseProperties> GetPeople(string term)
+        {
+            List<SQLDatabaseProperties> lst_return = new List<SQLDatabaseProperties>();
+
+            //BUILD QUERY
+            string queryStatement = "SELECT * FROM Records WHERE first_name LIKE '%" + term +
+                "%' OR last_name LIKE '%" + term + "%' ;";
+
+            //OPEN CONNECTION
+            _dbConnection.Open();
+
+            _sqlCommand = new SqlCommand(queryStatement, _dbConnection);
+
+            //EXECUTE QUERY
+            SqlDataReader dataReader = _sqlCommand.ExecuteReader();
+
+            //READ DATA RETURNED
+            while (dataReader.Read())
+            {
+                //ARRAY FOR DATA IN CURRENT ROW
+                object[] records = new object[8];
+
+                //NEW PERSON INSTANCE
+                SQLDatabaseProperties newPerson = new SQLDatabaseProperties();
+
+                //POPULATE DATA FROM DATA READER INTO ARRAY
+                dataReader.GetValues(records);
+
+                //SET PROPERTIES OF PERSON INSTANCE
+                newPerson.id = Convert.ToInt32(records[0].ToString());
+                newPerson.firstName = records[1].ToString();
+                newPerson.lastName = records[2].ToString();
+                newPerson.phoneNumber = records[3].ToString();
+                newPerson.notes = records[4].ToString();
+                newPerson.email = records[5].ToString();
+                newPerson.address = records[6].ToString();
+                newPerson.birthday = records[7].ToString();
+
+
+                if (newPerson.active == true)
+                {
+                    lst_return.Add(newPerson);
+                }
+                //ADD TO LIST
+            }//end while
+
+            //DESTROY COMMAND INSTANCE
+            _dbConnection.Dispose();
+
+            //CLOSE CONNECTION WHEN DONE (IMPORTANT)
+            _dbConnection.Close();
+
+            //RETURN LIST OF PERSONS
+            return lst_return;
+        }//end method
+
     }//end class
 }//end namespace

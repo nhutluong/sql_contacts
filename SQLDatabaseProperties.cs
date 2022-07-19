@@ -20,6 +20,7 @@ namespace sql_contactslist
         public string company { get; set; }
         public Boolean favorites { get; set; }
         public Boolean active { get; set; }
+        public byte[] image { get; set; }
 
         public string resultData
         {
