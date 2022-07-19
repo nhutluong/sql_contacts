@@ -280,8 +280,8 @@ namespace sql_contactslist
             List<SQLDatabaseProperties> lst_return = new List<SQLDatabaseProperties>();
 
             //BUILD QUERY
-            string queryStatement = "SELECT * FROM Records WHERE first_name LIKE '%" + term +
-                "%' OR last_name LIKE '%" + term + "%' ;";
+            string queryStatement = "SELECT * FROM Records WHERE firstName LIKE '%" + term +
+                "%' OR lastName LIKE '%" + term + "%' ;";
 
             //OPEN CONNECTION
             _dbConnection.Open();
